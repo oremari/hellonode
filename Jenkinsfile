@@ -37,14 +37,14 @@ node {
 
        
 
-        * I 've added this tho lines to publish the image into the IBM private registry.
+       /* I 've added this tho lines to publish the image into the IBM private registry.
         docker tag oremari77/hellonode registry.eu-de.bluemix.net/oreste/hellonode:1
         docker push registry.eu-de.bluemix.net/oreste/hellonode:1
 
       } 
 
     stage('Run image into kubernates in IBM Cloud') {
-       * This job run the image in IBM Cloud
+       /* This job run the image in IBM Cloud
          kubectl run hello-world --image=registry.eu-de.bluemix.net/oreste/hellonode:1
          kubectl  expose deployment/hello-world --type=NodePort --port=8080 --name=hello-world-service --target-port=8080
         }
